@@ -7,10 +7,15 @@ Possíveis casos de uso por ator:
 -> Proprietário/Gerente:
 
 Gerenciar funcionários
+
 Gerenciar produtos
+
 Gerenciar valores
+
 Gerar relatórios
+
 Configurar o sistema
+
 Gerenciar agenda geral 
 
 ***
@@ -18,8 +23,11 @@ Gerenciar agenda geral
 -> Funcionários:
 
 Modificar agenda pessoal 
-Registrar tipos de atendimentos 
+
+Registrar tipos de atendimentos
+
 Consultar agenda
+
 Consultar histórico de clientes
 
 ***
@@ -27,10 +35,15 @@ Consultar histórico de clientes
 -> Recepcionista:
 
 Registrar clientes
+
 Agendar Cliente
+
 Vender produtos
+
 Gerenciar pagamentos
+
 Lista Espera
+
 Editar agenda 
 
 
