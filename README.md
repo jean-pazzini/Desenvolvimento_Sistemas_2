@@ -46,10 +46,21 @@ Lista Espera
 
 Editar agenda 
 
+***
 
+-> Cliente
 
+Consultar serviços
 
+Agendar serviço
 
+Cancelar agendamento
+
+Realizar pagamento
+
+Avaliar serviço
+
+Consultar histórico de serviços
 
 ***
 ***
