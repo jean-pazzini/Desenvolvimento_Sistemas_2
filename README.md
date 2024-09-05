@@ -1,8 +1,9 @@
+***
+
 1. Identificar casos de uso de negócio por ator (cumprir metas do usuário);
 Possíveis casos de uso por ator:
 
 ***
-
 
 -> Proprietário/Gerente:
 
@@ -14,43 +15,33 @@ Gerenciar valores
 
 Gerar relatórios
 
-Configurar o sistema
-
-Gerenciar agenda geral 
-
 ***
 
 -> Funcionários:
-
-Modificar agenda pessoal 
 
 Registrar tipos de atendimentos
 
 Consultar agenda
 
-Consultar histórico de clientes
+Consultar histórico de serviços
 
 ***
 
 -> Recepcionista:
 
-Registrar clientes
-
-Agendar Cliente
-
 Vender produtos
 
 Gerenciar pagamentos
 
-Lista Espera
-
-Editar agenda 
+Gerenciar agenda geral 
 
 ***
 
 -> Cliente
 
-Consultar serviços
+Criar conta
+
+Consultar serviço
 
 Agendar serviço
 
@@ -67,42 +58,47 @@ Consultar histórico de serviços
 
 2. Descrever os casos de uso de forma resumida;
 
-   ***
-   
-Exemplo de descrição resumida:
-
-Editar agenda : caso de uso responsavel por editar agenda registrada do estabelecimento.
-
-Lista espera: caso de uso responsavel por guardar dados de clientes que desejam aguardar liberação de horario para algum serviço ou profissional
-
-Registrar Clientes : realiza o cadastro de clientes com dados necessarios para realixar o agendamento.
-
-Agendar Cliente:  caso de uso responsavel por acessar agenda e realizar o agendamento do serviço.
-
-Vender produtos: Registrar vendas e emitir notas fiscais.
-
-Gerenciar pagamentos: Receber pagamentos e emitir recibos.
-
-Gerenciar agenda geral  : define horario de funcionamento geral do estabelecimento 
-
-Modificar agenda pessoal : Caso de uso responsavel por editar horarios de agenda disponiveis.
-
-Registrar tipos de atendimentos : Caso de uso responsavel por  Detalhar os serviços realizados pelo profissional.
-
-Consultar agenda: Verificar seus próprios horários e disponibilidade.
-
-Consultar histórico de clientes: Acessar informações sobre serviços anteriores.
+***
 
 Gerenciar funcionários: CRUD.
 
-Gerenciar produtos:CRUD e controle visual e estoque.
+Gerenciar produtos: CRUD e controle visual e estoque.
 
-Gerenciar valores: definir comissoes, valores e gerenciar valores de entrada do estabeleciomento.
+Gerenciar valores: definir comissões, valores e gerenciar valores de entrada do estabelecimento.
 
-Gerar relatórios: caso de uso responsavel por gerar relatorio de clientes e produtos vendidos .
+Gerar relatórios: gerar relatórios de clientes, produtos vendidos, serviços mais procurados, etc.
 
-Configurar o sistema: Definir permissões, personalizar a interface.
+***
 
+Registrar tipos de atendimentos: detalhar os serviços realizados.
+
+Consultar agenda: verificar seus próprios horários e disponibilidade.
+
+Consultar histórico de serviços: acessar informações sobre serviços anteriores.
+
+***
+
+Vender produtos: registrar vendas, emitir notas fiscais e oferecer sugestões de produtos.
+
+Gerenciar pagamentos: receber pagamentos, emitir recibos e solucionar problemas relacionados a pagamentos.
+
+Gerenciar agenda geral: definir horário de funcionamento geral do estabelecimento.
+
+***
+
+Criar conta: realizar o cadastro no sistema com dados necessários para realizar o agendamento.
+
+Consultar serviços: visualizar a lista de serviços oferecidos, seus valores e detalhes.
+
+Agendar serviço: escolher um serviço e agendar um horário.
+
+Cancelar agendamento: cancelar um agendamento previamente realizado.
+
+Realizar pagamento: efetuar o pagamento por serviços ou produtos adquiridos.
+
+Avaliar serviço: avaliar a qualidade do atendimento e do serviço prestado.
+
+Consultar histórico de serviços: visualizar o histórico de serviços realizados, incluindo datas, valores e detalhes.
 
 ***
 ***
@@ -113,18 +109,18 @@ Configurar o sistema: Definir permissões, personalizar a interface.
    
 Caso de uso: Agendar serviço
 
-Ator: Recpecionista 
+Ator: Cliente (autoatendimento)
 
-Descrição: O funcionário acessa o sistema, busca por um cliente (ja cadastrado no banco de dados) e seleciona os serviços desejados e os profissionais disponiveis. Em seguida, o sistema apresenta os horários disponíveis para o cliente escolher. Após a confirmação do cliente, o agendamento é registrado no sistema e um email de confirmação é enviado ao cliente.
+Descrição: O cliente acessa o sistema, seleciona os serviços desejados e os profissionais disponiveis. Em seguida, o sistema apresenta os horários disponíveis para o cliente escolher. Após a confirmação do cliente, o agendamento é registrado no sistema e um email de confirmação é enviado ao cliente.
 
-Pré-condições: O funcionário está logado no sistema. A lista de serviços e profissionais está atualizada. Serviço disponivel na agenda do profissional. Data disponivel na agenda do profissional. Cliente cadastrado na base de dados do sistema
+Pré-condições: Cliente cadastrado na base de dados do sistema. Cliente está logado no sistema. A lista de serviços e profissionais está atualizada. Serviço disponivel na agenda do profissional. Data disponivel na agenda do profissional.
 
 Pós-condições: O agendamento é registrado no calendário do profissional e do cliente. O cliente recebe uma confirmação do agendamento.
 
 Fluxos alternativos: 
 
-Cliente não encontrado: O funcionário cadastra um novo cliente.
+Cliente não encontrado: O cliente deve criar uma conta para acesso ao sistema.
 
-Horário não disponível: O sistema sugere horários alternativos ou coloca o cliente em uma lista de espera.
+Horário não disponível: O sistema sugere horários alternativos.
 
 Serviço não disponível: O sistema informa que o serviço não está disponível e sugere alternativas.
